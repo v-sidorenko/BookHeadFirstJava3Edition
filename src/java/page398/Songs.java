@@ -2,7 +2,7 @@ package page398;
 
 import java.util.*;
 
-class Songs
+public class Songs
 {
     public List<Song> getSongs()
     {
