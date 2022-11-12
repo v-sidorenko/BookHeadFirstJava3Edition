@@ -5,12 +5,12 @@ import javax.swing.*;
 class MainFrame
         extends JFrame
 {
-    private int x, y = 50;
-    private int width, height = 300;
+    private final int x = 500, y = 500;
+    private final int width = 300, height = 300;
     
-    
-    public MainFrame()
+    public MainFrame(String frameName)
     {
+        super(frameName);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     

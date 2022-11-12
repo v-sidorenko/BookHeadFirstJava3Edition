@@ -5,24 +5,24 @@ import javax.swing.*;
 public class ButtonBox
         extends Box
 {
-    public ButtonBox()
+    public ButtonBox(BeatBox beatBox)
     {
         super(BoxLayout.Y_AXIS);
 
         JButton start = new JButton("Start");
-        start.addActionListener(e -> System.out.println("start button"));
+        start.addActionListener(e -> beatBox.buildTrackAndStart());
         this.add(start);
 
         JButton stop = new JButton("Stop");
-        stop.addActionListener(e -> System.out.println("stop button"));
+        stop.addActionListener(e -> beatBox.stop());
         this.add(stop);
 
         JButton upTempo = new JButton("Tempo Up");
-        upTempo.addActionListener(e -> System.out.println("upTempo button"));
+        upTempo.addActionListener(e -> beatBox.changeTempo(1.03f));
         this.add(upTempo);
 
         JButton downTempo = new JButton("TempoDawn");
-        downTempo.addActionListener(e -> System.out.println("dawnTempo button"));
+        downTempo.addActionListener(e -> beatBox.changeTempo(0.97f));
         this.add(downTempo);
     }
 
