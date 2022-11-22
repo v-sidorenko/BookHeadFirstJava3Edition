@@ -1,6 +1,6 @@
 package page540;
 
-class QuizCard
+public class QuizCard
 {
     private final String question;
     private final String answer;
