@@ -53,7 +53,9 @@ public class SimpleChatClientA {
 
     private void sendMessage()
     {
-        // get the text from the text field and
-        // send it to the server using the writer (a PrintWriter)
+        writer.println(outgoing.getText());
+        writer.flush();
+        outgoing.setText("");
+        outgoing.requestFocus();
     }
 }
